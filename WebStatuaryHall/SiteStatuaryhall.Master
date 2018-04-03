@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteStatuaryhall.master.cs" Inherits="WebStatuaryHall.SiteStatuaryhall" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        .Menu{
+            text-decoration:none;
+            color:#090909;
+        }
+        .Menu:hover{
+            background-color:gray;
+            color:white;
+        }
+        .a{
+            text-decoration:none;
+            color:#090909;
+        }
+    </style>
+    <link href="StyleSheetSH.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="border:1px solid #808080">
+            <tr style="height:90px;width:100%">
+                <td>
+                    <div style="text-align:left;">
+                    &nbsp<asp:HyperLink NavigateUrl="WebSignIn.aspx" runat="server" CssClass="Menu" >登录</asp:HyperLink>
+                        <asp:Label Text="|" runat="server" />
+                    <asp:HyperLink NavigateUrl="WebRegister.aspx" runat="server"  CssClass="Menu">注册</asp:HyperLink>
+                        <asp:Label Text="|" runat="server" />
+                        <asp:HyperLink NavigateUrl="WebBasicData.aspx" runat="server" CssClass="Menu">基础资料</asp:HyperLink>
+                        <asp:Label Text="|" runat="server" />
+                        <asp:HyperLink NavigateUrl="WebCensoringAndAdding.aspx" runat="server" >图片信息</asp:HyperLink>
+                    </div>
+                    <div style="text-align:center;font-size:50px;">
+                        图片大全
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table class="body" style="width:100%; text-align:center;">
+                        <tr>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebHomePage.aspx" runat="server" ID="hy" >首页</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=13" runat="server" CssClass="Menu">风景图</asp:HyperLink>
+                                
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=14" runat="server" CssClass="Menu">汽车</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=15" runat="server" CssClass="Menu" >动漫</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=16" runat="server" CssClass="Menu" >美食图片</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=17" runat="server" CssClass="Menu">星空</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:HyperLink NavigateUrl="WebCategoryPage.aspx?typeID=18" runat="server" CssClass="Menu">动物图片</asp:HyperLink>
+                            </td>
+                            <td class="Menu">
+                                <asp:TextBox runat="server" Width="250" Height="24" /><asp:Button Text="搜索" runat="server" Width="80" Height="30" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="body" colspan="3" style="border-bottom-width:5px;height:30px;border-top-width:5px">本站提供最新海量的高清图片,如果您有更好的图片题材,希望大家多多上传！</td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+
+                <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="body" colspan="3" style="text-align:center;">
+                    <br />
+                    本站所有的图片都是由网友提供，本站仅为网友提供图片信息的交流平台，所有图片版权归原权利人
+                    <br />
+                    <br />
+                    如有本站拒绝一切非法，淫秽图片，血腥暴力等...发现请立即向管理员举报：CharlotteQueen121@Gmail.com（本站是非盈利网站，不接任何广告）
+                   
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
